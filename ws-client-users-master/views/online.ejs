@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <ul>
+    <% for(var userid in users) { %>
+      <% if(!users[userid].isAdmin) { %>
+        <li><%= users[userid].username %></li>
+      <% } %>
+    <% } %>
+    </ul>
+
+    <p><a href="/user/main">Back to Main</a></p>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <div><%= message %></div><br>
+
+    <p>username: <%= username %></p>
+    <p>password: <%= password %></p>
+
+    <% if(isAdmin) { %>
+      <p><a href="/admin/adduser">Add New User</a></p>
+      <p><a href="/admin/online">All Users Online</a></p>
+    <% } %>
+    <p><a href="/user/online">Users Online</a></p>
+    <p><a href="/user/logout">Logout</a></p>
+  </body>
+</html>
